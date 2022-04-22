@@ -5,26 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Repositories"
-    android:background="@drawable/back2">
+    android:background="@drawable/back3">
 
-    <ListView
-        android:layout_width="wrap_content"
-        android:layout_height="382dp"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:textSize="17dp"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="300dp"
+        android:background="@color/lightgray"
+        android:text="XXXX's Repositories"
+        android:textColor="@color/white"
+        android:gravity="center
+">
+
+    </TextView>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="448dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="80dp"
         android:background="@color/white"
         android:cacheColorHint="@color/gray">
+
     </ListView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="530dp"
+        android:backgroundTint="@color/purple_200"
+        android:hint="Back"
+        android:textColorHint="@color/white" />
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="259dp"
-        android:layout_height="330dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="1035px"
+        android:layout_width="79dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="620dp"
+        android:layout_marginLeft="10dp"
         android:width="100px"
-        android:src="@drawable/logo"
-        />
+        android:src="@drawable/logo" />
 
 </RelativeLayout>
