@@ -43,7 +43,7 @@
         android:layout_width="259dp"
         android:layout_height="330dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="950px"
+        android:layout_marginTop="1030px"
         android:width="100px"
         android:src="@drawable/logo"
 
