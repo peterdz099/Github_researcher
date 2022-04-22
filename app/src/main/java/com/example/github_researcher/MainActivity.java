@@ -2,6 +2,7 @@ package com.example.github_researcher;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,27 +26,23 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        login = findViewById(R.id.loginView);
+        configureLoadButton();
 
-        loadButton = findViewById(R.id.loadButton);
+        login = findViewById(R.id.loginView);
 
         img = findViewById(R.id.img);
 
         researcher = new Researcher();
 
+    }
+    private void configureLoadButton(){
+        loadButton = findViewById(R.id.loadButton);
 
         loadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                user = login.getText().toString();
-
-                if (researcher.isUser()) {
-                    Toast.makeText(MainActivity.this, "DUPA", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "DUsko", Toast.LENGTH_SHORT).show();
-                }
+                startActivity(new Intent(MainActivity.this,RepositoriesActivity.class));
             }
         });
-
     }
 }

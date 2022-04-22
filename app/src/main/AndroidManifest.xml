@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Github_researcher">
         <activity
-            android:name=".Repositories"
+            android:name=".RepositoriesActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
