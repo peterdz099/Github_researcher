@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     //boolean click = true;
-    Researcher researcher;
+    //Researcher researcher;
     String user;
     ImageView img;
     Button loadButton;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         img = findViewById(R.id.img);
 
-        researcher = new Researcher();
+        //researcher = new Researcher();
 
     }
     private void configureLoadButton(){
