@@ -15,49 +15,37 @@
         android:layout_marginTop="20dp"
         android:height="50dp"
         android:background="@color/lightgray"
-        android:drawableLeft="@drawable/ic_baseline_view_list_24"
+        android:drawableLeft="@drawable/ic_baseline_info_24"
         android:gravity="center"
         android:paddingHorizontal="70dp"
-        android:text="User's Repositories"
         android:textColor="@color/white"
-        android:textSize="17dp">
+        android:textSize="17dp"
+       >
 
     </TextView>
 
-    <ListView
-        android:id="@+id/list"
+    <TextView
+        android:id="@+id/details"
         android:layout_width="match_parent"
         android:layout_height="389dp"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="80dp"
         android:background="@color/white"
         android:cacheColorHint="@color/gray"
+        android:gravity="center"
         >
 
-    </ListView>
+    </TextView>
 
     <Button
-        android:id="@+id/goBack"
+        android:id="@+id/goBackToRepos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="475dp"
         android:backgroundTint="@color/purple_200"
-        android:hint="Back"
+        android:hint="Back to repositories"
         android:textColorHint="@color/white" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:height="15dp"
-        android:text="Click repository to see the details"
-        android:textColor="@color/white"
-        android:textSize="12dp"
-        android:gravity="center"
-        android:layout_marginTop="530dp"
-
-        />
-
 
 
     <ImageView

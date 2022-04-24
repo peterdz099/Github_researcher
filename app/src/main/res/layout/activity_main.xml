@@ -11,8 +11,6 @@
         android:id="@+id/loginView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-
         android:layout_centerHorizontal="true"
         android:layout_marginTop="220dp"
         android:width="340dp"
@@ -20,8 +18,8 @@
         android:background="@color/white"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:gravity="center"
-
         android:hint="Enter Github Login Here"
+
         android:paddingHorizontal="55dp"
         android:textColor="@color/gray" />
 
@@ -38,6 +36,21 @@
         android:textColor="@color/white"
         />
 
+    <TextView
+        android:id="@+id/user_not_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="30dp"
+        android:width="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="325dp"
+        android:text="User not found"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:visibility="invisible"/>
+
+
     <ImageView
         android:id="@+id/img"
         android:layout_width="259dp"
@@ -46,8 +59,7 @@
         android:layout_marginTop="970px"
         android:width="100px"
         android:src="@drawable/logo"
-
-
         />
+
 
 </RelativeLayout>
