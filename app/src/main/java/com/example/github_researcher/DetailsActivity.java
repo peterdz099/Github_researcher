@@ -75,7 +75,7 @@ public class DetailsActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //list.setAdapter(arrayAdapter);
+                        details.setText(detailsText.toString());
                     }
                 });
 
