@@ -1,27 +1,17 @@
 # Github_researcher
 
-Github Researcher to aplikacja na platformę Android, która ma za zadanie wyszukiwać zarówno repozytoria użytkownika Github jak i Języki, które zawiera.
-Aplikację napisałem w jezyku Java uzywajac Android Studio. Do repozytorium projektu dolaczylem rowniez plik github_researcher.apk ktory mozna bezposrednio pobrac na swoj telefon, 
-zainstalowac aplikacje oraz bez problemu z niej korzystac. 
+Github_researcher to aplikacja na platformę Android, która ma za zadanie wyszukiwać zarówno repozytoria użytkownika Github jak i języki, w których kod w repozytorium  został napisany. Aplikację stworzyłem w języku Java używając Android Studio. Do repozytorium projektu dolaczylem rowniez plik github_researcher.apk, który mozna bezposrednio pobrac na swoj telefon, zainstalowac aplikacje oraz bez problemu z niej korzystac. Osobiscie uwazazam, ze zadanie wykonalem na bardzo dobrym poziomie, poswiecajac mu cala moja uwage przez kilka ostatnich dni. 
 
-Osobiscie uwazazam, ze zadanie wykonalem na bardzo dobrym poziomie, poswiecajac mu cala moja uwage. Niestety nie udalo mi sie zrealizowac jednego zalozenia zadania, 
-a mianowicie wyswietlania na ekranie liczby bajtow kodu napisanego w danym jezyku w repozytorium. Zwyczajnie braklo mi na to czasu. Liczbe bajtow zastapilem jednak 
-procentami (procent uzycia jezyka w repozytorium). Do wykonania zadania uzylem biblioteki Jsoup, dzieki ktorej moglem pobierac dane bezposrednio ze strony github.com.
+Opis działania aplikacji.
 
-Opis działania.
+W ekranie głównym użytkownik wpisuje nazwę użytkownika. Jeżeli taki użytkownik nie istnieje na ekranie pojawia się napis "User not found". Zostało to osiągnięte przez pobieranie statusu wątku HttpStatusException. Jeżeli kod statusu to "404" aplikacja nie przechodzi do kolejnego Activity.
 
-1.W ekranie glownym uzytkownik wpisuje nazwe uzytkownika. Jezeli taki uzytkownik nie istnieje na ekranie pojawia sie napis "User not found". Zostalo to osiagniete przez 
-pobieranie statusu HttpStatusException. Jezeli kod statusu to 404 aplikacja nie przechodzi do kolejnego Activity.
+W kolejny Activity wyświetlane są repozytoria istniejącego użytkownika. Po kliknięciu w nazwę repozytorium przechodzimy do ekranu szczegółów na temat repozytorium (lista jeżyków oraz w ilu procentach zostały użyte). Jeżeli użytkownik nie posiada repozytoriów na ekranie wyświetli się wiadomość "XYZ doesn’t have any public repositories yet", która również jest pobierana z kodu źródłowego strony. Klikniecie wiadomości skutkuje przejściem do kolejnego ekranu w którym widoczna jest pusta lista języków.
 
-1.W kolejny activity wyswietlane sa repozytoria istniejacego uzytkownika, ktore mozna klikac. Przenosi nas to ekranu szczegolow na temat repozytorium (lista jezykow 
-oraz procenty). Jezeli uzytkowniknie posiada repozytoriow na ekranie wyswietli sie wiadomosc "XYZ doesn’t have any public repositories yet", ktora rowniez jest 
-pobierana z kodu zrodlowego strony. Klikniecie wiadomosci skutkuje przejsciem do kolejnego ekranu w ktorym widoczna jest pusta lista jezykow.
+Link do filmu demonstrującego działanie aplikacji na YouTube: https://www.youtube.com/shorts/pgp8uToe-8I.
 
+Zadanie uważam za bardzo ciekawe i rozwijające. W następnych iteracjach można rozwinąć projekt o pobieranie większej ilości szczegółów danego repozytorium (np. listę współtwórców, ilość commitów etc) oraz o jeszcze ciekawszy design.
 
-Zadanie uwazam za bardzo ciekawe i rozwiajace. W natepnych iteracjach moznaby rozwinac projekt o pobieranie wiekszej ilosci szczegolow danego repozytorium (np. liste 
-wspoltworcow, ilosc commitow etc) oraz o jeszcze ciekawszy desing. 
-
-Link do filmu ilustrującego działanie aplikacjie na YouTube: https://www.youtube.com/shorts/pgp8uToe-8I.
 
 
 INSTALACJA
