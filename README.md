@@ -1,16 +1,14 @@
-# Github_researcher
-
-Github_researcher to aplikacja na platformę Android, która ma za zadanie wyszukiwać zarówno repozytoria użytkownika Github jak i języki, w których kod w repozytorium  został napisany. Aplikację stworzyłem w języku Java używając Android Studio. Do repozytorium projektu dołączyłem również plik github_researcher.apk, który mozna bezpośrednio pobrać na swój telefon, zainstalować aplikacje oraz bez problemu z niej korzystać. Osobiscie uważam, ze zadanie wykonałem na bardzo dobrym poziomie, poswiecając mu cała moją uwagą przez kilka ostatnich dni. 
+Github_researcher to aplikacja na platformę Android, która ma za zadanie wyszukiwać zarówno repozytoria użytkownika Github jak i języki, w których kod w repozytorium został napisany. Aplikację stworzyłem w języku Java używając Android Studio. Do repozytorium projektu dołączyłem również plik github_researcher.apk, który można bezpośrednio pobrać na swój telefon, zainstalować aplikację oraz bez problemu z niej korzystać. Osobiście uważam, ze zadanie wykonałem na bardzo dobrym poziomie, poświęcając mu całą moją uwagę przez kilka ostatnich dni.
 
 Opis działania aplikacji.
 
 W ekranie głównym użytkownik wpisuje nazwę użytkownika. Jeżeli taki użytkownik nie istnieje na ekranie pojawia się napis "User not found". Zostało to osiągnięte przez pobieranie statusu wątku HttpStatusException. Jeżeli kod statusu to "404" aplikacja nie przechodzi do kolejnego Activity.
-
-W kolejny Activity wyświetlane są repozytoria istniejącego użytkownika. Po kliknięciu w nazwę repozytorium przechodzimy do ekranu szczegółów na temat repozytorium (lista jeżyków oraz w ilu procentach zostały użyte). Jeżeli użytkownik nie posiada repozytoriów na ekranie wyświetli się wiadomość "XYZ doesn’t have any public repositories yet", która również jest pobierana z kodu źródłowego strony. Klikniecie wiadomości skutkuje przejściem do kolejnego ekranu w którym widoczna jest pusta lista języków.
+W kolejny Activity wyświetlane są repozytoria istniejącego użytkownika. Po kliknięciu w nazwę repozytorium przechodzimy do ekranu szczegółów na temat repozytorium (lista języków oraz w ilu procentach zostały użyte). Jeżeli użytkownik nie posiada repozytoriów na ekranie wyświetli się wiadomość "XYZ doesn’t have any public repositories yet", która również jest pobierana z kodu źródłowego strony. Klikniecie wiadomości skutkuje przejściem do kolejnego ekranu w którym widoczna jest pusta lista języków.
 
 Link do filmu demonstrującego działanie aplikacji na YouTube: https://www.youtube.com/shorts/pgp8uToe-8I.
 
 Zadanie uważam za bardzo ciekawe i rozwijające. W następnych iteracjach można rozwinąć projekt o pobieranie większej ilości szczegółów danego repozytorium (np. listę współtwórców, ilość commitów etc) oraz o jeszcze ciekawszy design.
+
 
 
 
