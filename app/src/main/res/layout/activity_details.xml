@@ -37,8 +37,8 @@
         android:gravity="center"
         android:textSize="@dimen/_15sdp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="test">
     </TextView>
 
     <Button
