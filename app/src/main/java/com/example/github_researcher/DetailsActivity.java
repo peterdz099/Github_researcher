@@ -38,7 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
         userName = intent.getStringExtra("NAME");
 
         repoLink = new StringBuilder("https://github.com/");
-        detailsText = new StringBuilder("LANGUAGES:").append("/n");
+        detailsText = new StringBuilder("LANGUAGES:").append("\n");
 
         button = findViewById(R.id.goBackToRepos);
 
@@ -62,13 +62,17 @@ public class DetailsActivity extends AppCompatActivity {
         thread = new Thread(new Runnable(){
             @Override
             public void run() {
-                repoLink.append(userName).append("/").append(nameOfRepo);
+                repoLink.append(userName).append("/").append(repoString);
+                System.out.println(repoLink.toString());
                 try {
                     Document doc = Jsoup.connect(repoLink.toString()).get();
-                    Elements languages = doc.getElementsByClass("color-fg-default text-bold mr-1");
+                    //Document doc = Jsoup.connect("https://github.com/bazelbuild/bazel").get();
+                    Elements languages = doc.getElementsByClass("d-inline-flex flex-items-center flex-nowrap Link--secondary no-underline text-small mr-3");
+                    Elements languageLast = doc.getElementsByClass("d-inline-flex flex-items-center flex-nowrap text-small mr-3");
                     for (Element language : languages) {
-                        detailsText.append(language.text()).append("/n");
+                        detailsText.append(language.text()).append("\n");
                     }
+                    detailsText.append(languageLast.text());
                 }catch (IOException e) {
                     e.printStackTrace();
                 }

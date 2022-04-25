@@ -33,6 +33,7 @@
         android:background="@color/white"
         android:cacheColorHint="@color/gray"
         android:gravity="center"
+        android:textSize="18dp"
         >
 
     </TextView>
