@@ -17,11 +17,13 @@ Zadanie uważam za bardzo ciekawe i rozwijające. W następnych iteracjach możn
 INSTALACJA
 1. Kliknij plik .apk w repozytorium Github_researcher. (https://github.com/peterdz099/Github_researcher)
 
-![image](https://user-images.githubusercontent.com/103062015/165175641-16b91d6c-c452-49ac-b1b1-8544aef34f1d.png)
+![Screenshot_2022-04-26-01-24-19-4](https://user-images.githubusercontent.com/103062015/165190596-83ab9a67-3e88-4c47-ade0-41969a0b539e.jpg)
+
 
 2. Pobierz plik na swoje urzadzenie z Androidem. Konieczne moze byc zezwolenie na pobieranie plikow .apk z nieznanego zrodla. 
 
-![image](https://user-images.githubusercontent.com/103062015/165175950-3accac09-e079-450d-9b02-0c8bad208045.png)
+![Screenshot_2022-04-26-01-24-29-394_com android chrome](https://user-images.githubusercontent.com/103062015/165190689-3e8cc0fc-0141-4e8f-a934-433691a5eb80.jpg)
+
 
 ![Screenshot_2022-04-25-23-17-39-0](https://user-images.githubusercontent.com/103062015/165190246-05ae5303-2199-4563-9f99-81ca68772cdf.jpg)
 
