@@ -5,22 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/back2">
+    android:background="@drawable/back1">
 
     <EditText
         android:id="@+id/loginView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
-        android:width="340dp"
-        android:height="50dp"
+        android:layout_marginTop="@dimen/_160sdp"
+        android:width="@dimen/_290sdp"
+        android:height="@dimen/_40sdp"
         android:background="@color/white"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:gravity="center"
         android:hint="Enter Github Login Here"
-
-        android:paddingHorizontal="55dp"
+        android:paddingHorizontal="@dimen/_55sdp"
         android:textColor="@color/gray" />
 
     <Button
@@ -28,9 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="270dp"
-        android:width="340dp"
-        android:height="50dp"
+        android:layout_marginTop="@dimen/_205sdp"
+        android:width="@dimen/_290sdp"
+        android:height="@dimen/_45sdp"
         android:backgroundTint="@color/purple_200"
         android:text="Load Repositories"
         android:textColor="@color/white"
@@ -40,12 +39,12 @@
         android:id="@+id/user_not_found"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:height="30dp"
-        android:width="250dp"
+        android:height="@dimen/_30sdp"
+        android:width="@dimen/_250sdp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="@dimen/_250sdp"
         android:text="User not found"
-        android:textSize="15dp"
+        android:textSize="@dimen/_10sdp"
         android:gravity="center"
         android:textColor="@color/white"
         android:visibility="invisible"/>
@@ -53,13 +52,14 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="259dp"
-        android:layout_height="330dp"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="@dimen/_290sdp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="970px"
-        android:width="100px"
-        android:src="@drawable/logo"
+        android:layout_marginTop="@dimen/_270sdp"
+        android:width="@dimen/_20sdp"
+        android:src="@drawable/pixe"
         />
+
 
 
 </RelativeLayout>
