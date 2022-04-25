@@ -20,14 +20,14 @@ INSTALACJA
 ![Screenshot_2022-04-26-01-24-19-4](https://user-images.githubusercontent.com/103062015/165190596-83ab9a67-3e88-4c47-ade0-41969a0b539e.jpg)
 
 
-2. Pobierz plik na swoje urzadzenie z Androidem. Konieczne moze byc zezwolenie na pobieranie plikow .apk z nieznanego zrodla. 
+2. Pobierz plik na swoje urządzenie z Androidem. Konieczne może byc zezwolenie na pobieranie plików .apk z nieznanego zródła. 
 
 ![Screenshot_2022-04-26-01-24-29-3](https://user-images.githubusercontent.com/103062015/165190823-1d7267d8-20d2-4528-ab05-d8580c530469.jpg)
 
 ![Screenshot_2022-04-25-23-17-39-0](https://user-images.githubusercontent.com/103062015/165190246-05ae5303-2199-4563-9f99-81ca68772cdf.jpg)
 
 
-3. Wejdz w pobrane pliki i zainstaluj aplikacje. Konieczne moze byc zezwolenie na instalacje aplikacji z nieznanego zrodla.
+3. Wejdź w pobrane pliki i zainstaluj aplikację. Konieczne może być zezwolenie na instalację aplikacji z nieznanego źródła.
 
 ![Screenshot_2022-04-25-23-17-23-9](https://user-images.githubusercontent.com/103062015/165190297-6a0606ed-2f22-4ac5-81e9-0bcf959c101e.jpg)
 
