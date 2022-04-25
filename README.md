@@ -31,12 +31,12 @@ INSTALACJA
 
 ![image](https://user-images.githubusercontent.com/103062015/165175950-3accac09-e079-450d-9b02-0c8bad208045.png)
 
-![Screenshot_2022-04-25-23-17-23-981_com android chrome](https://user-images.githubusercontent.com/103062015/165187604-f031342d-bdf4-4cb4-9a68-45371195458c.jpg)
-
+![Screenshot_2022-04-25-23-17-23-9812_com android chrome](https://user-images.githubusercontent.com/103062015/165187747-30715972-51a0-4da3-bce9-a64463b8b5c6.jpg)
 
 3. Wejdz w pobrane pliki i zainstaluj aplikacje. Konieczne moze byc zezwolenie na instalacje aplikacji z nieznanego zrodla.
 
-![Screenshot_2022-04-25-23-17-39-026_com android vending (1)](https://user-images.githubusercontent.com/103062015/165187590-56c8d5f8-8230-4ad1-9bf6-ff138347a7fa.jpg)
+![Screenshot_2022-04-25-23-17-39-0262_com android vending (1)](https://user-images.githubusercontent.com/103062015/165187833-ade6653d-b304-4c69-b4f6-969a89ca8fe8.jpg)
+
 
 
 
