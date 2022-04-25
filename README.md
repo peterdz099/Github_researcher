@@ -27,11 +27,18 @@ INSTALACJA
 
 ![image](https://user-images.githubusercontent.com/103062015/165175641-16b91d6c-c452-49ac-b1b1-8544aef34f1d.png)
 
-2. Pobierz plik na swoje urzadzenie z Androidem.Konieczne moze byc zezwolenie na pobieranie plikow .apk z nieznanego zrodla. 
+2. Pobierz plik na swoje urzadzenie z Androidem. Konieczne moze byc zezwolenie na pobieranie plikow .apk z nieznanego zrodla. 
 
 ![image](https://user-images.githubusercontent.com/103062015/165175950-3accac09-e079-450d-9b02-0c8bad208045.png)
 
+![Screenshot_2022-04-25-23-17-23-981_com android chrome](https://user-images.githubusercontent.com/103062015/165187604-f031342d-bdf4-4cb4-9a68-45371195458c.jpg)
+
+
 3. Wejdz w pobrane pliki i zainstaluj aplikacje. Konieczne moze byc zezwolenie na instalacje aplikacji z nieznanego zrodla.
+
+![Screenshot_2022-04-25-23-17-39-026_com android vending (1)](https://user-images.githubusercontent.com/103062015/165187590-56c8d5f8-8230-4ad1-9bf6-ff138347a7fa.jpg)
+
+
 
 
 
