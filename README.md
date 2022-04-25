@@ -1,3 +1,4 @@
+#Github_researcher
 Github_researcher to aplikacja na platformę Android, która ma za zadanie wyszukiwać zarówno repozytoria użytkownika Github jak i języki, w których kod w repozytorium został napisany. Aplikację stworzyłem w języku Java używając Android Studio. Do repozytorium projektu dołączyłem również plik github_researcher.apk, który można bezpośrednio pobrać na swój telefon, zainstalować aplikację oraz bez problemu z niej korzystać. Osobiście uważam, ze zadanie wykonałem na bardzo dobrym poziomie, poświęcając mu całą moją uwagę przez kilka ostatnich dni.
 
 Opis działania aplikacji.
