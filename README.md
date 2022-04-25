@@ -24,13 +24,16 @@ wspoltworcow, ilosc commitow etc) oraz o jeszcze ciekawszy desing.
 
 INSTALACJA
 1. Kliknij plik .apk w repozytorium Github_researcher. (https://github.com/peterdz099/Github_researcher)
+
 ![image](https://user-images.githubusercontent.com/103062015/165175641-16b91d6c-c452-49ac-b1b1-8544aef34f1d.png)
 
-2. Pobierz plik na swoje urzadzenie z Androidem.
+2. Pobierz plik na swoje urzadzenie z Androidem.Konieczne moze byc zezwolenie na pobieranie plikow .apk z nieznanego zrodla. 
 
 ![image](https://user-images.githubusercontent.com/103062015/165175950-3accac09-e079-450d-9b02-0c8bad208045.png)
 
-3.
+3. Wejdz w pobrane pliki i zainstaluj aplikacje. Konieczne moze byc zezwolenie na instalacje aplikacji z nieznanego zrodla.
+
+
 
 
 
