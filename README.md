@@ -22,8 +22,7 @@ INSTALACJA
 
 2. Pobierz plik na swoje urzadzenie z Androidem. Konieczne moze byc zezwolenie na pobieranie plikow .apk z nieznanego zrodla. 
 
-![Screenshot_2022-04-26-01-24-29-394_com android chrome](https://user-images.githubusercontent.com/103062015/165190689-3e8cc0fc-0141-4e8f-a934-433691a5eb80.jpg)
-
+![Screenshot_2022-04-26-01-24-29-3](https://user-images.githubusercontent.com/103062015/165190823-1d7267d8-20d2-4528-ab05-d8580c530469.jpg)
 
 ![Screenshot_2022-04-25-23-17-39-0](https://user-images.githubusercontent.com/103062015/165190246-05ae5303-2199-4563-9f99-81ca68772cdf.jpg)
 
