@@ -33,7 +33,7 @@
         android:layout_marginHorizontal="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_65sdp"
         android:background="@color/white"
-        android:cacheColorHint="@color/gray"
+        android:textColor="@color/black"
         android:gravity="center"
         android:textSize="@dimen/_15sdp"
         app:layout_constraintStart_toStartOf="parent"
