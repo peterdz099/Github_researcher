@@ -21,6 +21,8 @@ pobierana z kodu zrodlowego strony. Klikniecie wiadomosci skutkuje przejsciem do
 Zadanie uwazam za bardzo ciekawe i rozwiajace. W natepnych iteracjach moznaby rozwinac projekt o pobieranie wiekszej ilosci szczegolow danego repozytorium (np. liste 
 wspoltworcow, ilosc commitow etc) oraz o jeszcze ciekawszy desing. 
 
+Link do filmu ilustrującego działanie aplikacjie na YouTube: https://www.youtube.com/shorts/pgp8uToe-8I.
+
 
 INSTALACJA
 1. Kliknij plik .apk w repozytorium Github_researcher. (https://github.com/peterdz099/Github_researcher)
