@@ -1,7 +1,7 @@
 # Github_researcher
 
 Github Researcher to aplikacja na platformę Android, która ma za zadanie wyszukiwać zarówno repozytoria użytkownika Github jak i Języki, które zawiera.
-Aplikację napisałem w jezyku Java uzywajac Android Studio. Do repozytorium projektu dolaczylem rowniez plik .apk ktory mozna bezposrednio pobrac na swoj telefon, 
+Aplikację napisałem w jezyku Java uzywajac Android Studio. Do repozytorium projektu dolaczylem rowniez plik github_researcher.apk ktory mozna bezposrednio pobrac na swoj telefon, 
 zainstalowac aplikacje oraz bez problemu z niej korzystac. 
 
 Osobiscie uwazazam, ze zadanie wykonalem na bardzo dobrym poziomie, poswiecajac mu cala moja uwage. Niestety nie udalo mi sie zrealizowac jednego zalozenia zadania, 
@@ -11,7 +11,7 @@ procentami (procent uzycia jezyka w repozytorium). Do wykonania zadania uzylem b
 Opis działania.
 
 1.W ekranie glownym uzytkownik wpisuje nazwe uzytkownika. Jezeli taki uzytkownik nie istnieje na ekranie pojawia sie napis "User not found". Zostalo to osiagniete przez 
-pobieranie statusu HTTPSTATUSEXCEPTION. Jezeli kod statusu to 404 aplikacja nie przechodzi do kolejnego Activity.
+pobieranie statusu HttpStatusException. Jezeli kod statusu to 404 aplikacja nie przechodzi do kolejnego Activity.
 
 1.W kolejny activity wyswietlane sa repozytoria istniejacego uzytkownika, ktore mozna klikac. Przenosi nas to ekranu szczegolow na temat repozytorium (lista jezykow 
 oraz procenty). Jezeli uzytkowniknie posiada repozytoriow na ekranie wyswietli sie wiadomosc "XYZ doesn’t have any public repositories yet", ktora rowniez jest 
