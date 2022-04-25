@@ -50,6 +50,7 @@
         android:visibility="invisible"/>
 
 
+
     <ImageView
         android:id="@+id/img"
         android:layout_width="@dimen/_290sdp"
