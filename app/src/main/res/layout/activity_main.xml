@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/back1">
+    android:background="@drawable/back1"
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/loginView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_160sdp"
         android:width="@dimen/_290sdp"
         android:height="@dimen/_40sdp"
@@ -19,48 +19,75 @@
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:gravity="center"
         android:hint="Enter Github Login Here"
+        android:padding="@dimen/_9sdp"
         android:paddingHorizontal="@dimen/_55sdp"
-        android:textColor="@color/gray" />
+        android:singleLine="true"
+        android:textColor="@color/gray"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/loadButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_205sdp"
         android:width="@dimen/_290sdp"
         android:height="@dimen/_45sdp"
         android:backgroundTint="@color/purple_200"
         android:text="Load Repositories"
         android:textColor="@color/white"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/user_not_found"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:height="@dimen/_30sdp"
-        android:width="@dimen/_250sdp"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_250sdp"
-        android:text="User not found"
-        android:textSize="@dimen/_10sdp"
+        android:width="@dimen/_250sdp"
+        android:height="@dimen/_30sdp"
         android:gravity="center"
+        android:text="User not found"
         android:textColor="@color/white"
-        android:visibility="invisible"/>
-
+        android:textSize="@dimen/_10sdp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="@dimen/_290sdp"
-        android:layout_height="@dimen/_290sdp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_270sdp"
-        android:width="@dimen/_20sdp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/pixe"
-        />
+        app:layout_constraintDimensionRatio="1:1.2"
+        app:layout_constraintTop_toTopOf="@id/guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintLeft_toLeftOf="@id/guideline3"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
 
 
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
