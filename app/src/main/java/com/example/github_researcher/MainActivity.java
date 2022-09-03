@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 
@@ -22,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
     Button loadButton;
     TextView login;
     TextView message;
+    TextView swipe;
     Thread thread;
+    float x1,x2,y1,y2;
 
 
     @Override
@@ -37,11 +41,34 @@ public class MainActivity extends AppCompatActivity {
 
         message = findViewById(R.id.user_not_found);
 
+        swipe = findViewById(R.id.user_not_found2);
+
         loadButton = findViewById(R.id.loadButton);
 
         configureLoadButton();
 
     }
+
+    public boolean onTouchEvent(MotionEvent touchEvent){
+        switch(touchEvent.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x1 = touchEvent.getX();
+                y1 = touchEvent.getY();
+                break;
+            case MotionEvent.ACTION_UP:
+                x2 = touchEvent.getX();
+                y2 = touchEvent.getY();
+
+                if(x1 < x2){
+                    Intent i = new Intent(MainActivity.this, SavedRepositoriesActivity.class);
+                    startActivity(i);
+                }
+            break;
+        }
+        return false;
+    }
+
+
     private void configureLoadButton(){
         loadButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -53,15 +80,16 @@ public class MainActivity extends AppCompatActivity {
                         public void run() {
                             try {
                                 Document doc = Jsoup.connect(userLink.toString()).get();
-                                startActivity(new Intent(MainActivity.this,RepositoriesActivity.class).putExtra("LINK",userLink.toString()).putExtra("NAME",login.getText().toString()));
+                                startActivity(new Intent(MainActivity.this,RepositoriesActivity.class).putExtra(
+                                        "LINK",userLink.toString()).putExtra("NAME",login.getText().toString()));
                                 finish();
                             }catch(org.jsoup.HttpStatusException ex){
                                 if (ex.getStatusCode() == 404){
                                     runOnUiThread(new Runnable(){
                                         @Override
                                         public void run() {
+                                            swipe.setVisibility(View.INVISIBLE);
                                             message.setVisibility(View.VISIBLE);
-                                            System.out.println("dupa");
                                             userLink.delete(19,userLink.length());
                                             login.setText("");
                                         }

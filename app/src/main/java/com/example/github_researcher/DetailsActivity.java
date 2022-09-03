@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -15,6 +16,7 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -23,9 +25,14 @@ public class DetailsActivity extends AppCompatActivity {
     TextView details;
     String repoString;
     String userName;
+    String lastUpdate;
     StringBuilder repoLink;
     StringBuilder detailsText;
     Thread thread;
+    JSONObject user;
+    ApiConnector connector;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +43,13 @@ public class DetailsActivity extends AppCompatActivity {
 
         repoString = intent.getStringExtra("REPO");
         userName = intent.getStringExtra("NAME");
+        lastUpdate = intent.getStringExtra("UPDATE");
+
 
         repoLink = new StringBuilder("https://github.com/");
         detailsText = new StringBuilder("LANGUAGES:").append("\n");
+
+        connector = new ApiConnector();
 
         button = findViewById(R.id.goBackToRepos);
 
@@ -48,7 +59,9 @@ public class DetailsActivity extends AppCompatActivity {
 
         details = findViewById(R.id.details);
 
-        readDetails();
+        //readDetails();
+
+        readDetails2();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,24 +71,27 @@ public class DetailsActivity extends AppCompatActivity {
         });
     }
 
-    public void readDetails(){
+
+    public void readDetails2(){
         thread = new Thread(new Runnable(){
             @Override
             public void run() {
-                repoLink.append(userName).append("/").append(repoString);
-                System.out.println(repoLink.toString());
-                try {
-                    Document doc = Jsoup.connect(repoLink.toString()).get();
-                    //Document doc = Jsoup.connect("https://github.com/bazelbuild/bazel").get();
-                    Elements languages = doc.getElementsByClass("d-inline-flex flex-items-center flex-nowrap Link--secondary no-underline text-small mr-3");
-                    Elements languageLast = doc.getElementsByClass("d-inline-flex flex-items-center flex-nowrap text-small mr-3");
-                    for (Element language : languages) {
-                        detailsText.append(language.text()).append("\n");
-                    }
-                    detailsText.append(languageLast.text());
-                }catch (IOException e) {
-                    e.printStackTrace();
+
+                user = connector.connectLanguages(userName, repoString);
+
+                Iterator keys = user.keys();
+
+                detailsText.append("\n");
+
+                while(keys.hasNext()){
+                    detailsText.append((String)keys.next() + "\n" );
                 }
+
+                detailsText.append("\n");
+                detailsText.append("UPDATED AT:" + "\n");
+
+                detailsText.append(lastUpdate);
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

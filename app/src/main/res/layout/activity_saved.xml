@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_18sdp"
         android:height="@dimen/_40sdp"
         android:background="@color/lightgray"
         android:drawableLeft="@drawable/ic_baseline_view_list_24"
         android:gravity="center"
-        android:paddingHorizontal="@dimen/_20sdp"
-        android:text="User's Repositories"
+        android:paddingHorizontal="@dimen/_15sdp"
+        android:text="Saved versions"
         android:textColor="@color/white"
         android:textSize="@dimen/_13sdp"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,9 +30,9 @@
     <ListView
         android:id="@+id/list"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_300sdp"
+        android:layout_height="@dimen/_355sdp"
         android:layout_marginHorizontal="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_65sdp"
+        android:layout_marginTop="@dimen/_63sdp"
         android:background="@color/white"
         android:cacheColorHint="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,28 +40,15 @@
 
     </ListView>
 
-    <Button
-        android:id="@+id/goBack"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_366sdp"
-        android:backgroundTint="@color/purple_200"
-        android:hint="Back"
-        android:textColorHint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_402sdp"
+        android:layout_marginTop="@dimen/_426sdp"
         android:height="@dimen/_15sdp"
         android:gravity="center"
-        android:text="Click repository to track its' releases"
+        android:text="Swipe right to see another Users' repositories"
         android:textColor="@color/white"
-
         android:textSize="@dimen/_10sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

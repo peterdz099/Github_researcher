@@ -29,7 +29,7 @@
     <TextView
         android:id="@+id/details"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_300sdp"
+        android:layout_height="@dimen/_330sdp"
         android:layout_marginHorizontal="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_65sdp"
         android:background="@color/white"
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_30sdp"
-        android:layout_marginTop="@dimen/_366sdp"
+        android:layout_marginTop="@dimen/_396sdp"
         android:backgroundTint="@color/purple_200"
         android:hint="Back to repositories"
         android:textColorHint="@color/white"
