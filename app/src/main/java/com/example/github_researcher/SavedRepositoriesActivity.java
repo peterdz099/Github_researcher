@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -24,6 +26,7 @@ public class SavedRepositoriesActivity extends AppCompatActivity {
     ArrayList<String> array;
     ArrayAdapter<String> arrayAdapter;
     Thread thread;
+    ApiConnector connector;
     float x1,x2,y1,y2;
 
     @Override
@@ -37,8 +40,19 @@ public class SavedRepositoriesActivity extends AppCompatActivity {
 
         arrayAdapter = new ArrayAdapter<String>(this, R.layout.listlayout, array);
 
+        connector = new ApiConnector();
 
+        findSavedRepos();
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                finish();
+                startActivity(getIntent());
+            }
+        });
     }
+
 
     public boolean onTouchEvent(MotionEvent touchEvent){
         switch(touchEvent.getAction()){
@@ -51,18 +65,38 @@ public class SavedRepositoriesActivity extends AppCompatActivity {
                 y2 = touchEvent.getY();
 
                 if(x1 > x2){
+
                     Intent i = new Intent(SavedRepositoriesActivity.this, MainActivity.class);
                     startActivity(i);
+                    finish();
+
                 }
                 break;
         }
         return false;
     }
 
-    public void loadSavedRepos(){
+    public void findSavedRepos() {
         thread = new Thread(new Runnable(){
             @Override
             public void run() {
+                if(fileExist("SavedRepositories.json")){
+                   try{
+
+                       String savedRepos = readFromFile("SavedRepositories.json");
+
+                       JSONArray arr = new JSONArray(savedRepos);
+
+                       loadSavedRepos(arr, array);
+
+
+                   }catch (JSONException ex){
+                       ex.printStackTrace();
+                   }
+                }else{
+                    array.add("You haven't saved any repository yet");
+                }
+
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -72,6 +106,28 @@ public class SavedRepositoriesActivity extends AppCompatActivity {
             }
         });
         thread.start();
+    }
+
+
+
+    public String readFromFile(String filename){
+        File path = getApplicationContext().getFilesDir();
+        File readFrom = new File(path,filename);
+        byte[] content = new byte[(int)readFrom.length()];
+        try{
+            FileInputStream stream = new FileInputStream(readFrom);
+            stream.read(content);
+            stream.close();
+            return new String(content);
+        }catch (Exception e){
+            e.printStackTrace();
+            return e.toString();
+        }
+    }
+
+    public boolean fileExist(String fname){
+        File file = getBaseContext().getFileStreamPath(fname);
+        return file.exists();
     }
 
     public void writeToFile(String name, String content){
@@ -85,23 +141,41 @@ public class SavedRepositoriesActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+    public void loadSavedRepos(JSONArray savedRepos, ArrayList<String> array){
 
-    public String readFromFile(String filename){
-        File path = getApplicationContext().getFilesDir();
-        File readFrom = new File(path,filename);
-        byte[] content = new byte[(int)readFrom.length()];
-        try{
-            FileInputStream stream = new FileInputStream(readFrom);
-            stream.read(content);
-            return new String(content);
-        }catch (Exception e){
-            e.printStackTrace();
-            return e.toString();
+        String repoString;
+        String lastUpdate;
+
+        try {
+            JSONObject object;
+
+            System.out.println(savedRepos);
+
+            for (int i = 0; i < savedRepos.length(); i++) {
+
+                object = savedRepos.getJSONObject(i);
+                lastUpdate = connector.connectUpdatedat((String) object.get("USERNAME"), (String) object.get("REPO"));
+
+                if(lastUpdate.equals((String) object.get("UPDATE"))){
+
+                    repoString = (String) (object.get("USERNAME") + "/" + object.get("REPO") +
+                            "\n" + "UPDATED AT: " + object.get("UPDATE"));
+
+
+
+                }else{
+                    System.out.println(savedRepos);
+                    repoString = (String) (object.get("USERNAME") + "/" + object.get("REPO") +
+                            "\n" +  "UPDATED!!!!");
+                    object.put("UPDATE",lastUpdate);
+                    writeToFile("SavedRepositories.json", savedRepos.toString());
+                }
+
+                array.add(repoString);
+                System.out.println(savedRepos);
+            }
+        } catch (JSONException ex) {
+            ex.printStackTrace();
         }
-    }
-
-    public boolean fileExist(String fname){
-        File file = getBaseContext().getFileStreamPath(fname);
-        return file.exists();
     }
 }

@@ -48,8 +48,7 @@ public class RepositoriesActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        //StrictMode.setThreadPolicy(policy);
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repositories);
@@ -84,20 +83,21 @@ public class RepositoriesActivity extends AppCompatActivity{
         list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String lastUpdate;
-                try {
-                    lastUpdate = user.getJSONArray("items").getJSONObject(i).getString("updated_at");
-                    Intent intent = new Intent(RepositoriesActivity.this,DetailsActivity.class);
-                    intent.putExtra("REPO",list.getItemAtPosition(i).toString());
-                    intent.putExtra("NAME",userName);
-                    intent.putExtra("UPDATE",lastUpdate);
-                    startActivity(intent);
+                if(!list.getItemAtPosition(i).equals("User doesn't have any public repositories yet")){
+                    String lastUpdate;
+                    try {
+                        lastUpdate = user.getJSONArray("items").getJSONObject(i).getString("pushed_at");
+                        Intent intent = new Intent(RepositoriesActivity.this,DetailsActivity.class);
+                        intent.putExtra("REPO",list.getItemAtPosition(i).toString());
+                        intent.putExtra("NAME",userName);
+                        intent.putExtra("UPDATE",lastUpdate);
+                        startActivity(intent);
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }}
+                    return false;
                 }
-                return false;
-            }
         });
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -108,7 +108,7 @@ public class RepositoriesActivity extends AppCompatActivity{
                 if(fileExist("SavedRepositories.json")){
                     try {
 
-                        String update = user.getJSONArray("items").getJSONObject(i).getString("updated_at");
+                        String update = user.getJSONArray("items").getJSONObject(i).getString("pushed_at");
                         String savedRepos = readFromFile("SavedRepositories.json");
 
                         JSONObject obj = new JSONObject();

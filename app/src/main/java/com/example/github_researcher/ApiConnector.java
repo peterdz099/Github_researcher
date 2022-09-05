@@ -32,7 +32,6 @@ public class ApiConnector {
             connection.setReadTimeout(5000);
 
             int status = connection.getResponseCode();
-            //System.out.println(status);
             if (status > 299) { //if conncetion is not avaible
                 reader = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
                 while ((line = reader.readLine()) != null) {
@@ -49,15 +48,6 @@ public class ApiConnector {
 
 
             JSONObject jsonObject = new JSONObject(responseContent.toString());
-
-
-            //System.out.println(loadRepos(jsonObject));
-
-            //String nameRepos = jsonObject.getJSONArray("items").getJSONObject(2).getString("name"); //pierwszy get pobierasz liste repo tego uzytkownika drugi get ktore repo 3 get juz dane
-            //String language = jsonObject.getJSONArray("items").getJSONObject(0).getString("language");
-            //String lastUpdate = jsonObject.getJSONArray("items").getJSONObject(0).getString("updated_at");
-
-            //System.out.println("Nazwa repo to: " + nameRepos + "    jezyk: " + language + "   ostatni update: " + lastUpdate);
 
             return jsonObject;
 
@@ -120,7 +110,58 @@ public class ApiConnector {
         return new JSONObject();
     }
 
+    public String connectUpdatedat(String nickname, String repoName) {
 
+        BufferedReader reader;
+        String line;
+        StringBuffer responseContent = new StringBuffer();
+        String updatedAt;
+
+        try {
+            URL url = new URL("https://api.github.com/repos/" + nickname + "/" + repoName);
+            connection = (HttpURLConnection) url.openConnection(); //open connection
+
+            //Request setup
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(5000);
+            connection.setReadTimeout(5000);
+
+            int status = connection.getResponseCode();
+
+            if (status > 299) { //if conncetion is not avaible
+                reader = new BufferedReader(new InputStreamReader(connection.getErrorStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseContent.append(line);
+                }
+                reader.close();
+            } else { //if connection is succesfull
+                reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                while ((line = reader.readLine()) != null) {
+                    responseContent.append(line);
+                }
+                reader.close();
+            }
+
+
+            JSONObject jsonObject = new JSONObject(responseContent.toString());
+
+
+            updatedAt = jsonObject.get("pushed_at").toString();
+
+            return updatedAt;
+
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } finally {
+            connection.disconnect();
+        }
+        return new String();
+    }
 
     public void loadRepos(JSONObject object, ArrayList<String> repos) {
 
@@ -133,8 +174,8 @@ public class ApiConnector {
         } catch (JSONException ex) {
             ex.printStackTrace();
         }
-
-
     }
+
 }
+
 

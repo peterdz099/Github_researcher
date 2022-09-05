@@ -59,7 +59,6 @@ public class DetailsActivity extends AppCompatActivity {
 
         details = findViewById(R.id.details);
 
-        //readDetails();
 
         readDetails2();
 
@@ -86,6 +85,8 @@ public class DetailsActivity extends AppCompatActivity {
                 while(keys.hasNext()){
                     detailsText.append((String)keys.next() + "\n" );
                 }
+
+
 
                 detailsText.append("\n");
                 detailsText.append("UPDATED AT:" + "\n");
